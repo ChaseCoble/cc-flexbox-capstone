@@ -1,5 +1,5 @@
 html {
-  font-family: "Oxygen", sans-serif;
+  font-family: "PT-Serif", serif;
 }
 
 body {
@@ -17,6 +17,7 @@ body {
 .navbar .toggle,
 .navbar .brand {
   display: inline-block;
+  font-size: 1.5em;
 }
 
 .navbar .link {
@@ -58,6 +59,7 @@ body {
 .navbar .right {
     display: flex;
     flex: 1;
+    align-items: center;
   }
   .navbar .link {
     width: auto;
