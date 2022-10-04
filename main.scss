@@ -1,0 +1,83 @@
+$theme-color: #ece883;
+$toggle-color: #d9d570;
+$theme-text: black;
+$toggle-text: black;
+
+html {
+  font-family: "Oxygen", sans-serif;
+}
+body {
+  margin: 0px;
+}
+.navbar {
+  background: $theme-color;
+}
+.navbar div {
+  display: none;
+}
+.navbar .toggle,
+.navbar .brand {
+  display: inline-block;
+}
+.navbar .link {
+  display: block;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  background: $theme-color;
+  color: $theme-text;
+}
+.navbar .link:hover,
+.navbar .link:active {
+  color: $toggle-text;
+  background: $toggle-color;
+}
+.navbar .brand {
+  width: 10em;
+  text-align: center;
+  padding: 1em;
+  color: $theme-text;
+}
+.navbar a {
+  text-decoration: none;
+}
+.navbar .toggle {
+  padding: 1em;
+  color: $toggle-text;
+}
+@media (min-width: 48em) {
+  .navbar {
+    display: flex;
+  }
+  .navbar .left,
+  .navbar .right {
+    display: flex;
+    flex: 1;
+  }
+  .navbar .link {
+    width: auto;
+  }
+  .navbar .right {
+    justify-content: flex-end;
+  }
+  .navbar .toggle {
+    display: none;
+  }
+}
+@media (min-width: 48em) {
+  .navbar div {
+    display: flex;
+  }
+}
+@media (max-width: 48em) {
+  .navbar.active .toggle {
+    background: $theme-color;
+    color: $theme-text;
+  }
+  .navbar .brand {
+    text-align: left;
+  }
+  .navbar.active div {
+    display: block;
+  }
+}
